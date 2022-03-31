@@ -20,6 +20,7 @@ function solution(sequence) {
   for (var i = 0; i < sequence.length; i++) {
     if (sequence[i] <= sequence[i - 1]) {
       count++;
+      // below will cover if the array is something like [1, 2, 1, 2, 1, 2]
       if (sequence[i] <= sequence[i - 2] && sequence[i + 1] <= sequence[i - 1]) {
         return false;
       }
