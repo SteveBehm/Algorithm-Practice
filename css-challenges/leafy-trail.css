@@ -1,0 +1,32 @@
+  body {
+    background: #0B2429;
+  }
+
+  h1 {
+    text-align: center;
+    color: aliceblue;
+  }
+
+  .leaf {
+    width: 150px;
+    height: 150px;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+    position: absolute;
+    top: 75px;
+  }
+
+  .blue-leaf {
+    background: #1A4341;
+    left: 75px;
+  }
+
+  .green-leaf {
+    background: #998235;
+    left: 125px;
+  }
+
+  .yellow-leaf {
+    background: #F3AC3C;
+    left: 175px;
+  }
