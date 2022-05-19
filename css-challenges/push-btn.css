@@ -1,0 +1,47 @@
+body {
+  background: #6592CF;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+.yellow-circle {
+  position: absolute;
+  left: 175px;
+  top: 125px;
+  width: 50px;
+  height: 50px;
+  background: #EEB850;
+  border-radius: 50%;
+}
+
+.dark-blue-cir {
+  position: absolute;
+  background: #243D83;
+  width: 150px;
+  height: 150px;
+  left: 125px;
+  top: 75px;
+  border-radius: 50%
+}
+
+.lg-lt-bl-cir {
+  position: absolute;
+  background: #6592CF;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  top: 25px;
+  left: 75px;
+}
+
+.dk-blu-rec {
+  position: absolute;
+  background: #243D83;
+  height: 150px;
+  width: 300px;
+  top: 75px;
+  left: 50px
+}
