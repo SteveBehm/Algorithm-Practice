@@ -1,0 +1,28 @@
+ body {
+   background: #62306D;
+ }
+
+ .container {
+   position: absolute;
+   width: 300px;
+   height: 200px;
+   background: #62306D;
+   top: 50px;
+   left: 50px;
+   display: flex;
+ }
+
+ .first,
+ .third {
+   background-image: linear-gradient(to bottom, transparent 50%, #F7EC7D 50%);
+   height: 100%;
+   width: 33.33%;
+   border-radius: 50px;
+ }
+
+ .second {
+   height: 100%;
+   width: 33.33%;
+   border-radius: 50px;
+   background-image: linear-gradient(to top, transparent 50%, #F7EC7D 50%);
+ }
