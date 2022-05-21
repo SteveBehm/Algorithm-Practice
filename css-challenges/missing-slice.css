@@ -1,0 +1,19 @@
+ body {
+   background: #E3516E
+ }
+
+ div {
+   width: 200px;
+   height: 200px;
+   background: conic-gradient(#FADE8B 0deg 90deg, #E3516E 90deg 180deg, #F7F3D7 180deg 270deg, #51B5A9 270deg);
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border-radius: 50%;
+ }
+
+ h1 {
+   text-align: center;
+   color:aliceblue
+ }
