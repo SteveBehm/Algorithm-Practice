@@ -1,0 +1,12 @@
+div {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 141px 141px 0 0;
+  border-color: #f3ac3c #0b2429;
+}
+
+body {
+  background: #0b2429;
+  margin: 0;
+}
