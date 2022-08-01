@@ -1,11 +1,11 @@
-const inputString = 'steve';
+const inputString = "steve";
 
 function alphabeticShift(inputString) {
-  let outputStr = '';
+  let outputStr = "";
 
   for (let i = 0; i < inputString.length; i++) {
-    if (inputString[i] === 'z') {
-      outputStr += 'a';
+    if (inputString[i] === "z") {
+      outputStr += "a";
       continue;
     }
 
