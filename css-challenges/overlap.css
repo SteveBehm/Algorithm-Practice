@@ -1,0 +1,32 @@
+body {
+  background: #09042a;
+  position: relative;
+}
+
+.purp {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 67px;
+  top: 67px;
+  border-radius: 50%;
+  background: #7b3f61;
+}
+.pink {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  right: 67px;
+  top: 67px;
+  border-radius: 50%;
+  background: #e78481;
+  overflow: hidden;
+}
+.blue {
+  background: #09042a;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  right: 100px;
+  border-radius: 50%;
+}
