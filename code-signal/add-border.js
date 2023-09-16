@@ -53,23 +53,23 @@ return the outputArr
 
 function addBorder(picture) {
   const output = [];
-  let strLength = 0;
-  let frontBorder = '';
-  let backBorder = '';
+  let elementLength = 0;
+  let topBorder = "";
+  let bottomBorder = "";
 
   for (let i = 0; i < picture.length; i++) {
-    picture[i] = '*' + picture[i] + '*';
+    picture[i] = `*${picture[i]}*`;
+    elementLength = picture[i].length;
     output.push(picture[i]);
-    strLength = picture[i].length
   }
 
-  for (let i = 0; i < strLength; i++) {
-    frontBorder += '*';
-    backBorder += '*';
+  for (let i = 0; i < elementLength; i++) {
+    topBorder += "*";
+    bottomBorder += "*";
   }
 
-  output.push(backBorder)
-  output.unshift(frontBorder)
+  output.unshift(topBorder);
+  output.push(bottomBorder);
 
   return output;
 }
