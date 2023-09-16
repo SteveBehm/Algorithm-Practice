@@ -21,33 +21,48 @@
 
 // Array of the longest strings, stored in the same order as in the inputArray.
 
-// [JavaScript] Syntax Tips
+/* PSEUDOCODE
+  First we need to determine the length of the longest string
+  Create a variable that holds the length of the longest string
+  Create a variable that will hold the output array
 
-// // Prints help message to the console
-// // Returns a string
-// function helloWorld(name) {
-//   console.log("This prints to the console when you Run Tests");
-//   return "Hello, " + name;
-// }
+  Loop through the array
+  If the element has a length greater than the current longest length store the length of the array
 
+  Loop through the array again
+  If the element has a length equal to the longest element, put that element into the output array
+
+  return the output array
+*/
 function solution(inputArray) {
-  let longestStr = '';
+  let longestLength = 0;
   const outputArr = [];
 
   // find the longest string first
-  inputArray.map(string => {
-    if (string.length > longestStr.length) {
-      longestStr = string
+  for (let i = 0; i < inputArray.length; i++) {
+    if (inputArray[i].length > longestLength) {
+      longestLength = inputArray[i].length;
     }
-  })
+  }
 
-  // put any strings in the input array with the same length as the longest string
-  // into the output array
-  inputArray.map(string => {
-    if (longestStr.length === string.length) {
-      outputArr.push(string);
+  // Put any strings in the input array with the same length as the longest string into the output array
+  for (let i = 0; i < inputArray.length; i++) {
+    if (inputArray[i].length === longestLength) {
+      outputArr.push(inputArray[i]);
     }
-  })
+  }
+
+  return outputArr;
+}
+
+// Here is an alternative solution that uses the reduce and filter methods
+function solution2(inputArray) {
+  const longestLength = inputArray.reduce(
+    (maxLen, str) => Math.max(maxLen, str.length),
+    0
+  );
+
+  const outputArr = inputArray.filter((str) => str.length === longestLength);
 
   return outputArr;
 }
