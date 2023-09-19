@@ -43,48 +43,38 @@
 
 // true if a and b are similar, false otherwise.
 
-function solution(a, b) {
-    let c = [];
-    let d = [];
-
-    if (a.toString() === b.toString()) return true;
-
-    for (let i = 0; i < a.length; i++) {
-        if (a[i] !== b[i]) {
-            c.push(a[i]) // [1, 2]
-            d.push(b[i]) // [2, 1]
-        }
-    }
-    c = c.reverse();
-
-    if (d.length === 2 && c.toString() === d.toString()) {
-        return true;
-    } else {
-        return false;
-    }
-}
+// PSEUDOCODE
 
 /*
-We are given two arrays and we need to see if we can make them identical
-In order to make them identical all we can do is swap one pair of elements in the same array
-we will need to check if either array can be switched to match the other
+   In general I want to create a solution that counts the number of differences as I loop through the arrays
+   If there are more than two differences, then we won't be able to adjust an array by swapping one pair of elements
 
-create a variable that is an empty array to push a[i] values into
-create a variable that is an empty arrau to push b[i] values into
-
-we can use a guard to catch any arrays that are already the same
-we need to compare the string versions of arrays in order to get an accurate comparison
-
-loop through one of the arrays one character at a time until the end
-we will essentially be looping through both arrays at the same time
-
-if a[i] !=== b[i]
-we will push a[i] into its own array and b[i] into its own array
-if it is possible to just swap character in one array or the other
-then both of the array should have a length of 2 once the loop has completed
-
-now we need to reverse one of the arrays that we pushed values into
-
-if the reversed array has a length of 2 and the string versions of the two arrays we pushed values into are equal we can return true
-otherwise we need to return false
+   First, check to see if a === b as an edge case and return true if so
+   Create a variable that will act as a counter and initialize it to 0
+   Create another variable that will hold the indexes of the differing values
+   Loop through array a beginning at the first element
+   If the element in the first array at index i is not equal to the element at index i in the other array
+   Increment the counter
+   Add the index to the array holding the differing indexes
+   If the count > 2 return false
+   After the loop completes, we need to check if swapping the indexes make the arrays equal
 */
+
+function solution(a, b) {
+  if (a === b) return true;
+
+  const count = 0;
+  const diffIndexes = [];
+
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== b[i]) {
+      count++;
+      diffIndexes.push(i);
+    }
+
+    if (count >= 2) return false;
+  }
+
+  const [index1, index2] = diffIndexes;
+  return a[index1] === b[index2] && a[index2] === b[index1];
+}
